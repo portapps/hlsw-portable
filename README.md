@@ -1,0 +1,34 @@
+hlsw-portable.bat
+==================
+
+A DOS Batch script to make the game server browser [Half-Life Server Watch (HLSW)](http://www.hlsw.org/) portable.
+
+Tested on Windows Vista and Windows 7.
+
+Requirements
+------------
+
+* Latest version of [HLSW](http://www.hlsw.org/).
+* [WSH (Windows Script Host)](http://support.microsoft.com/kb/232211) : Open a command prompt and type ``wscript`` to check.
+
+Installation
+------------
+
+* Download the [latest version of HLSW](http://www.hlsw.org/hlsw/download/).
+* Begin the installation.
+* Do not create a shortcut on the desktop.
+* Copy the contents of the directory where you installed the application on your USB drive.
+* Uninstall the application.
+* Delete ``unins000.dat`` and ``unins000.exe`` files on your USB drive.
+* Put the ``hlsw-portable.bat`` in the same directory as ``hlsw.exe``.
+* Run ``hlsw-portable.bat``.
+
+Note
+----
+
+If you have already installed HLSW, the old configuration will be copied automatically to the portable version.
+
+More infos
+----------
+
+http://www.crazyws.fr/gaming/hlsw-portable-QTIQT.html
