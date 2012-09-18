@@ -2,6 +2,9 @@
 
 :: Config file
 SET hlswInvis=%TEMP%\hlswinvis_%RANDOM%.vbs
+SET hlswRnd=%TEMP%\hlswrnd_%RANDOM%.tmp
+SET hlswDel=%TEMP%\hlswdel_%RANDOM%.tmp
+SET hlswReg=%TEMP%\hlswreg_%RANDOM%.tmp
 
 IF "%1"=="" GOTO LAUNCH
 IF "%1"=="process" GOTO PROCESS
@@ -34,8 +37,33 @@ GOTO DONE
 :: Start HLSW
 :PROCESS
 IF NOT EXIST %CD%\data GOTO CREATE_DATA_FOLDER
+
+ECHO REGEDIT4>%hlswRnd%
+ECHO [HKEY_CURRENT_USER\Software\HLSW]>>%hlswRnd%
+ECHO "RandSeedFile"="%TEMP:\=\\%\\hlsw.rnd">>%hlswRnd%
+regedit /s %hlswRnd%
+DEL %hlswRnd%
+SET hlswRnd=
+
+regedit /s hlsw.ini
 start /w hlsw.exe "-PATH:%CD%\" "-DATADIR:%CD%\data\"
+
+DEL %TEMP%\hlsw.rnd
+regedit /ea %hlswReg% HKEY_CURRENT_USER\Software\HLSW
+fc hlsw.ini %hlswReg% | find "FC: no dif" > NUL
+IF ERRORLEVEL 1 COPY %hlswReg% hlsw.ini
+DEL %hlswReg%
+SET hlswReg=
+
+ECHO REGEDIT4>%hlswDel%
+ECHO.>>%hlswDel%
+ECHO [-HKEY_CURRENT_USER\Software\HLSW]>>%hlswDel%
+ECHO.>>%hlswDel%
+type %hlswDel%
+regedit /s %hlswDel%
+DEL %hlswDel%
 DEL %hlswInvis%
+SET hlswDel=
 GOTO DONE
 
 :: Create data folder 
