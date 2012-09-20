@@ -1,5 +1,5 @@
-hlsw-portable.bat
-==================
+HLSW Portable
+=============
 
 A DOS Batch script to make the game server browser [Half-Life Server Watch (HLSW)](http://www.hlsw.org/) portable.
 
