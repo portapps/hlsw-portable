@@ -1,5 +1,30 @@
 @ECHO OFF
 
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::                                                                                ::
+::  HLSW Portable                                                                 ::
+::                                                                                ::
+::  A DOS Batch script to make HLSW portable on Windows systems.                  ::
+::                                                                                ::
+::  Copyright (C) 2013-2014 Cr@zy <webmaster@crazyws.fr>                          ::
+::                                                                                ::
+::  HLSW Portable is free software; you can redistribute it and/or modify         ::
+::  it under the terms of the GNU Lesser General Public License as published by   ::
+::  the Free Software Foundation, either version 3 of the License, or             ::
+::  (at your option) any later version.                                           ::
+::                                                                                ::
+::  HLSW Portable is distributed in the hope that it will be useful,              ::
+::  but WITHOUT ANY WARRANTY; without even the implied warranty of                ::
+::  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the                  ::
+::  GNU Lesser General Public License for more details.                           ::
+::                                                                                ::
+::  You should have received a copy of the GNU Lesser General Public License      ::
+::  along with this program. If not, see http://www.gnu.org/licenses/.            ::
+::                                                                                ::
+::  Usage: hlsw-portable.bat                                                      ::
+::                                                                                ::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
 :: Config file
 SET hlswInvis=%TEMP%\hlswinvis_%RANDOM%.vbs
 SET hlswRnd=%TEMP%\hlswrnd_%RANDOM%.tmp
