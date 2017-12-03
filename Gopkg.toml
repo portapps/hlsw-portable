@@ -1,6 +1,6 @@
 [metadata]
-package = "github.com/portapps/discord-portable"
-homepage = "https://github.com/portapps/discord-portable"
+package = "github.com/portapps/hlsw-portable"
+homepage = "https://github.com/portapps/hlsw-portable"
 license = "MIT"
 
 [[constraint]]
