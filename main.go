@@ -4,6 +4,7 @@ package main
 
 import (
 	"fmt"
+	"os"
 
 	. "github.com/portapps/portapps"
 )
@@ -29,6 +30,6 @@ func main() {
 	}
 
 	ImportRegKey(regKey)
-	Launch()
+	Launch(os.Args[1:])
 	ExportRegKey(regKey)
 }
