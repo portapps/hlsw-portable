@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.4.0.2-4 (2018/02/11)
+
+* Move ia32/x64 to win32/win64 for arch def
+
 ## 1.4.0.2-3 (2018/02/09)
 
 * Ability to pass custom args to the portable process

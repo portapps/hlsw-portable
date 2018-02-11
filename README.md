@@ -19,12 +19,12 @@ Tested on Windows 7, Windows 8.1 and Windows 10.
 
 There are different kinds of artifacts :
 
-* `hlsw-portable-{ia32,x64}-x.x.x-x-setup.exe` : Full portable release of HLSW as a setup. **Recommended way**!
-* `hlsw-portable-{ia32,x64}-x.x.x-x.7z` : Full portable release of HLSW as a 7z archive.
-* `hlsw-portable-{ia32,x64}.exe` : Only the portable binary (must be renamed `hlsw-portable.exe`)
-* `HLSW-{ia32,x64}-x.x.x-setup.exe` : The original setup from the [official website](http://hlsw.org/hlsw/download/).
+* `hlsw-portable-win{32,64}-x.x.x-x-setup.exe` : Full portable release of HLSW as a setup. **Recommended way**!
+* `hlsw-portable-win{32,64}-x.x.x-x.7z` : Full portable release of HLSW as a 7z archive.
+* `hlsw-portable-win{32,64}.exe` : Only the portable binary (must be renamed `hlsw-portable.exe`)
+* `HLSW-win{32,64}-x.x.x-setup.exe` : The original setup from the [official website](http://hlsw.org/hlsw/download/).
 
-For a **fresh installation**, install `hlsw-portable-{ia32,x64}-x.x.x-x-setup.exe` where you want then run `hlsw-portable.exe`.
+For a **fresh installation**, install `hlsw-portable-win{32,64}-x.x.x-x-setup.exe` where you want then run `hlsw-portable.exe`.
 
 If **you have already installed HLSW from the original setup**, do the same thing as a fresh installation and move the data located in `%APPDATA%\HLSW` to `data` then run `hlsw-portable.exe`.<br />
 Then you can [remove](https://support.microsoft.com/en-us/instantanswers/ce7ba88b-4e95-4354-b807-35732db36c4d/repair-or-remove-programs) HLSW from your computer.
