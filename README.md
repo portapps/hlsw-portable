@@ -1,8 +1,8 @@
 <p align="center"><a href="https://portapps.github.io/app/hlsw-portable" target="_blank"><img width="100" src="https://github.com/portapps/hlsw-portable/blob/master/res/papp.png"></a></p>
 
 <p align="center">
-  <a href="https://github.com/portapps/hlsw-portable/releases/latest"><img src="https://img.shields.io/github/release/portapps/hlsw-portable.svg?style=flat-square" alt="GitHub release"></a>
-  <a href="https://github.com/portapps/hlsw-portable/releases/latest"><img src="https://img.shields.io/github/downloads/portapps/hlsw-portable/total.svg?style=flat-square" alt="Total downloads"></a>
+  <a href="https://portapps.github.io/app/hlsw-portable/#download"><img src="https://img.shields.io/github/release/portapps/hlsw-portable.svg?style=flat-square" alt="GitHub release"></a>
+  <a href="https://portapps.github.io/app/hlsw-portable/#download"><img src="https://img.shields.io/github/downloads/portapps/hlsw-portable/total.svg?style=flat-square" alt="Total downloads"></a>
   <a href="https://ci.appveyor.com/project/portapps/hlsw-portable"><img src="https://img.shields.io/appveyor/ci/portapps/hlsw-portable.svg?style=flat-square" alt="AppVeyor"></a>
   <a href="https://goreportcard.com/report/github.com/portapps/hlsw-portable"><img src="https://goreportcard.com/badge/github.com/portapps/hlsw-portable?style=flat-square" alt="Go Report"></a>
   <a href="https://www.codacy.com/app/portapps/hlsw-portable"><img src="https://img.shields.io/codacy/grade/b98953c923a54e91a1347f04b0c28cd1.svg?style=flat-square" alt="Code Quality"></a>
