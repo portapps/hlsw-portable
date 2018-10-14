@@ -17,7 +17,7 @@ func init() {
 
 func main() {
 	Papp.AppPath = AppPathJoin("app")
-	Papp.DataPath = AppPathJoin("data")
+	Papp.DataPath = CreateFolder(AppPathJoin("data"))
 	Papp.Process = PathJoin(Papp.AppPath, "hlsw.exe")
 	Papp.Args = []string{fmt.Sprintf("-PATH:%s", Papp.AppPath), fmt.Sprintf("-DATADIR:%s", Papp.DataPath)}
 	Papp.WorkingDir = Papp.AppPath
