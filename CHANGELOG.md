@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.4.0.3-1 (2019/03/09)
+
+* Upgrade to HLSW 1.4.0.3
+* Portapps 1.20.2
+
 ## 1.4.0.2-4 (2018/02/11)
 
 * Move ia32/x64 to win32/win64 for arch def
