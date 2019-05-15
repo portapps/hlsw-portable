@@ -12,13 +12,15 @@
 
 ## Notice of Non-Affiliation and Disclaimer
 
-Portapps is not affiliated, associated, authorized, endorsed by, or in any way officially connected with HLSW, or any of its subsidiaries or its affiliates. The official HLSW website can be found at http://hlsw.org/.
+Portapps is not affiliated, associated, authorized, endorsed by, or in any way officially connected with HLSW™, or any of its subsidiaries or its affiliates.
 
-The name HLSW® as well as related names, marks, emblems and images are registered trademarks of their respective owners.
+The official HLSW™ website can be found at http://hlsw.org/.
+
+The name HLSW™ as well as related names, marks, emblems and images are registered trademarks of their respective owners.
 
 ## About
 
-HLSW (Game server browser and administration tool) portable app made with 🚀 [Portapps](https://portapps.io).<br />
+HLSW™ (Game server browser and administration tool) portable app made with 🚀 [Portapps](https://portapps.io).<br />
 Documentation and downloads can be found on https://portapps.io/app/hlsw-portable/
 
 ## How can I help ?
