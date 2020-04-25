@@ -12,15 +12,25 @@ import (
 	"github.com/portapps/portapps/v2/pkg/utl"
 )
 
+type config struct {
+	Cleanup bool `yaml:"cleanup" mapstructure:"cleanup"`
+}
+
 var (
 	app *portapps.App
+	cfg *config
 )
 
 func init() {
 	var err error
 
+	// Default config
+	cfg = &config{
+		Cleanup: false,
+	}
+
 	// Init app
-	if app, err = portapps.New("hlsw-portable", "HLSW"); err != nil {
+	if app, err = portapps.NewWithCfg("hlsw-portable", "HLSW", cfg); err != nil {
 		log.Fatal().Err(err).Msg("Cannot initialize application. See log file for more info.")
 	}
 }
@@ -33,20 +43,24 @@ func main() {
 		fmt.Sprintf("-DATADIR:%s", app.DataPath),
 	}
 
-	regsPath := utl.CreateFolder(app.RootPath, "reg")
-	regFile := utl.PathJoin(regsPath, "HLSW.reg")
+	regFile := utl.PathJoin(utl.CreateFolder(app.RootPath, "reg"), "HLSW.reg")
 	regKey := registry.Key{
 		Key:  `HKCU\Software\HLSW`,
 		Arch: "32",
 	}
 
-	if err := registry.Import(regKey, regFile); err != nil {
+	if err := regKey.Import(regFile); err != nil {
 		log.Error().Err(err).Msg("Cannot import registry key")
 	}
 
 	defer func() {
-		if err := registry.Export(regKey, regFile); err != nil {
+		if err := regKey.Export(regFile); err != nil {
 			log.Error().Err(err).Msg("Cannot export registry key")
+		}
+		if cfg.Cleanup {
+			if err := regKey.Delete(true); err != nil {
+				log.Error().Err(err).Msg("Cannot remove registry key")
+			}
 		}
 	}()
 
