@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.4.0.3-2 (2020/04/25)
+
+* Check reg key exists before export (#8)
+* Add `cleanup` config
+* Portapps 2.2.0
+
 ## 1.4.0.3-1 (2019/03/09)
 
 * HLSW 1.4.0.3
