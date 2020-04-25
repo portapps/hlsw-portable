@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.4.0.3-3 (2020/04/25)
+
+* Cleanup folders too
+* Portapps 2.2.1
+
 ## 1.4.0.3-2 (2020/04/25)
 
 * Check reg key exists before export (#8)

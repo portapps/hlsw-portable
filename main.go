@@ -5,6 +5,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"path"
 
 	"github.com/portapps/portapps/v2"
 	"github.com/portapps/portapps/v2/pkg/log"
@@ -41,6 +42,15 @@ func main() {
 	app.Args = []string{
 		fmt.Sprintf("-PATH:%s", app.AppPath),
 		fmt.Sprintf("-DATADIR:%s", app.DataPath),
+	}
+
+	// Cleanup on exit
+	if cfg.Cleanup {
+		defer func() {
+			utl.Cleanup([]string{
+				path.Join(os.Getenv("APPDATA"), "HLSW"),
+			})
+		}()
 	}
 
 	regFile := utl.PathJoin(utl.CreateFolder(app.RootPath, "reg"), "HLSW.reg")
